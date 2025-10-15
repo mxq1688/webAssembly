@@ -1,0 +1,16 @@
+{
+  "name": "assemblyscript-demo",
+  "version": "1.0.0",
+  "description": "AssemblyScript WebAssembly Demo",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts --target release --outFile build/untouched.wasm --textFile build/untouched.wat",
+    "asbuild:optimized": "asc assembly/index.ts --target release --outFile build/optimized.wasm --optimize",
+    "asbuild": "npm run asbuild:optimized",
+    "build": "npm run asbuild",
+    "serve": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.27.0"
+  }
+}
+
